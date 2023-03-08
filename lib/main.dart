@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,21 +23,21 @@ class MyApp extends StatelessWidget {
                 child: const Text(''),
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.white,
-                  child: const Text('c2'),
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.grey,
-                  child: const Text('c2'),
-                )
-              ]),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.white,
+                      child: const Text('c2'),
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.grey,
+                      child: const Text('c2'),
+                    )
+                  ]),
               Row(children: <Widget>[
                 Container(
                   height: double.infinity,
@@ -51,3 +53,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//ndndndnd
