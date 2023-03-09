@@ -38,14 +38,12 @@ class MyApp extends StatelessWidget {
                       child: const Text('c2'),
                     )
                   ]),
-              Row(children: <Widget>[
-                Container(
-                  height: double.infinity,
-                  width: 100.0,
-                  color: Colors.red,
-                  child: const Text(''),
-                ),
-              ]),
+              Container(
+                height: double.infinity,
+                width: 100.0,
+                color: Colors.red,
+                child: const Text(''),
+              ),
             ],
           ),
         ),
@@ -54,4 +52,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//ndndndnd
+
