@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,43 +15,96 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.lightGreen,
-                child: const Text(''),
-              ),
-              Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.white,
-                      child: const Text('c2'),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const <Widget>[
+                CircleAvatar(
+                  radius: 50.0,
+                  // backgroundImage: AssetImage('images/chmonya.jpg'),
+                  backgroundImage: NetworkImage(
+                      'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg'),
+                ),
+                Text(
+                  'Sonya Vonigan',
+                  style: TextStyle(
+                    fontFamily: 'Satisfy',
+                    fontSize: 35.0,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'EATING HER ASS',
+                  style: TextStyle(
+                    fontFamily: 'Lobster',
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.grey,
+                  ),
+                ),
+                Card(
+                  color: Colors.white,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Color.fromARGB(255, 0, 77, 64),
+                        size: 30.0,
+                      ),
+                      title: Text(
+                        '+7 777 77 77',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 77, 64),
+                          fontFamily: 'Satisfy',
+                          fontSize: 20.0,
+                        ),
+                      ),
                     ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.grey,
-                      child: const Text('c2'),
-                    )
-                  ]),
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.red,
-                child: const Text(''),
-              ),
-            ],
-          ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.grey,
+                  ),
+                ),
+                Card(
+                  color: Colors.white,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: Color.fromARGB(255, 0, 77, 64),
+                        size: 30.0,
+                      ),
+                      title: Text(
+                        'sonya_chmonya@jopa.com',
+                        style: TextStyle(
+                          fontFamily: 'Satisfy',
+                          fontSize: 20.0,
+                          color: Color.fromARGB(255, 0, 77, 64),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ]),
         ),
       ),
     );
   }
 }
-
-
